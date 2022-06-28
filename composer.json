@@ -1,6 +1,7 @@
 {
     "name": "runthis/laravel-google-auth",
     "version": "1.0.0",
+    "license": "MIT",
     "description": "Set up google authentication in laravel",
     "keywords": [
         "laravel",
