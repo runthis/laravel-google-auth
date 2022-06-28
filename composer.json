@@ -1,0 +1,56 @@
+{
+    "name": "runthis/laravel-google-auth",
+    "description": "Set up google authentication in laravel",
+    "keywords": [
+        "laravel",
+        "login"
+    ],
+    "homepage": "https://github.com/runthis/laravel-google-auth",
+    "authors": [
+        {
+            "name": "runthis"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "google/apiclient": "^2.12.1",
+        "guzzlehttp/guzzle": "^7.4",
+        "illuminate/contracts": "^9.0",
+        "illuminate/http": "^9.9",
+        "illuminate/support": "^9.9",
+        "spatie/laravel-package-tools": "^1.9.2"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^6.0",
+        "orchestra/testbench": "^7.0",
+        "slevomat/coding-standard": "^7.1",
+        "spatie/laravel-ray": "^1.26",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "scripts": {
+        "pre-autoload-dump": "Google\\Task\\Composer::cleanup"
+    },
+    "autoload": {
+        "psr-4": {
+            "Runthis\\Login\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": false
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Runthis\\Login\\LoginServiceProvider"
+            ],
+            "aliases": {
+                "Login": "Runthis\\Login\\Facades\\Login"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
