@@ -26,6 +26,8 @@ Open up your .env file and add the following keys and adjust as necessary.
     GOOGLE_VALID_DOMAIN="domain.com"
 
 
+With the above environment variables; When a user visits /login in your application, they will be presented with a page containing a button to sign in with Google.
+
 
 ## Usage
 
