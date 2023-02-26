@@ -2,6 +2,10 @@
 
 All notable changes to will be documented in this file.
 
+## 2.0.1 - 2023-02-26
+
+laravel 10
+
 ## 2.0.0 - 2023-02-26
 
 Updated for Laravel 10
