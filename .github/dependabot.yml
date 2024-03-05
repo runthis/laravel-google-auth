@@ -1,12 +1,46 @@
-# Please see the documentation for all configuration options:
-# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
-
 version: 2
 updates:
-
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
+      interval: "monthly"
+
+  - package-ecosystem: "npm"
+    versioning-strategy: increase
+    directory: "/"
+    groups:
+      npm-dependencies:
+        dependency-type: "production"
+        update-types:
+          - "minor"
+          - "patch"
+      npm-dev-dependencies:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+    ignore:
+      - dependency-name: "eslint*"
+    schedule:
       interval: "weekly"
-    labels:
-      - "dependencies"
+      day: "sunday"
+  - package-ecosystem: "composer"
+    versioning-strategy: increase
+    directory: "/"
+    groups:
+      composer-dependencies:
+        dependency-type: "production"
+        update-types:
+          - "minor"
+          - "patch"
+      composer-dev-dependencies:
+        dependency-type: "development"
+        update-types:
+          - "minor"
+          - "patch"
+    ignore:
+      - dependency-name: "squizlabs/php_codesniffer"
+      - dependency-name: "slevomat/coding-standard"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
