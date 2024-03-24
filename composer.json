@@ -23,7 +23,7 @@
         "spatie/laravel-package-tools": "^1.16.4"
     },
     "require-dev": {
-        "nunomaduro/collision": "^6.0",
+        "nunomaduro/collision": "^7.10",
         "orchestra/testbench": "^8.22",
         "spatie/laravel-ray": "^1.35",
         "squizlabs/php_codesniffer": "^3.6"
